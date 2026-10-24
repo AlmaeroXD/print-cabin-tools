@@ -1,35 +1,768 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#153d35">
-<title>Print Cabin Tools | Kalkulator Formatting</title>
-<style>
-:root{--ink:#1d2926;--muted:#65736e;--line:#e0e7e3;--paper:#f5f7f4;--brand:#153d35;--accent:#c4e6d8;--soft:#eaf4ef;--shadow:0 12px 35px rgba(24,54,44,.08)}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.5}.wrap{max-width:1080px;margin:0 auto;padding:24px 16px 42px}header{background:var(--brand);color:white;border-radius:24px;padding:28px 26px;position:relative;overflow:hidden}header:after{content:"";position:absolute;width:220px;height:220px;border:1px solid #ffffff26;border-radius:50%;right:-62px;top:-92px;box-shadow:0 0 0 28px #ffffff09,0 0 0 58px #ffffff06}.brandline{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:800}h1{font-size:clamp(25px,4vw,36px);line-height:1.15;margin:10px 0;max-width:600px}header p{color:#dbe8e2;margin:0;max-width:610px;font-size:14px}.pill{display:inline-flex;background:#ffffff1f;border:1px solid #ffffff33;padding:7px 11px;border-radius:100px;font-size:12px;margin-top:18px}.tool-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.tool-nav a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border:1px solid var(--line);background:#fff;color:var(--brand);font-size:13px;font-weight:800;padding:11px 14px;border-radius:12px}.tool-nav a.active{background:var(--brand);color:#fff;border-color:var(--brand)}.layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:18px;margin-top:18px;align-items:start}.card{background:white;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}h2{font-size:17px;margin:0 0 5px}.sub{font-size:13px;color:var(--muted);margin:0 0 19px}.field-label{font-weight:750;font-size:13px;display:block;margin-bottom:9px}.categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.cat input{position:absolute;opacity:0}.cat label{display:block;border:1px solid var(--line);border-radius:14px;padding:13px;cursor:pointer;min-height:93px;background:white}.cat input:checked+label{border:2px solid var(--brand);padding:12px;background:var(--soft)}.cat label strong{display:block;font-size:14px}.cat label span{display:block;color:var(--muted);font-size:12px;margin-top:4px}.cat label em{display:block;font-style:normal;font-size:14px;font-weight:850;margin-top:8px;color:var(--brand)}.block{margin-top:22px}.flex{display:flex;align-items:center;justify-content:space-between;gap:12px}.count{font-size:21px;font-weight:850;color:var(--brand);white-space:nowrap}input[type=range]{width:100%;accent-color:var(--brand);margin:13px 0 7px}.marks{display:flex;justify-content:space-between;font-size:11px;color:var(--muted)}.numberline{display:flex;align-items:center;gap:10px;margin-top:12px}.numberline input{width:110px;border:1px solid var(--line);border-radius:10px;padding:10px;font-size:15px;font-weight:700}.hint{font-size:12px;color:var(--muted);margin-top:8px}select{width:100%;border:1px solid var(--line);padding:12px 13px;border-radius:12px;background:white;color:var(--ink);font-size:14px}.result{background:var(--brand);color:white;border-radius:18px;padding:20px;margin-bottom:14px}.caption{color:var(--accent);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:800}.total{font-size:clamp(31px,4vw,42px);font-weight:900;line-height:1.15;margin:7px 0}.small{font-size:12px;color:#dbe8e2}.rows{display:grid}.r{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:13px}.r:last-child{border-bottom:0}.r span:first-child{color:var(--muted)}.r strong{text-align:right;font-variant-numeric:tabular-nums}.saving{color:#14704f!important}.info{border-radius:12px;background:#f7f8f5;padding:12px;font-size:12px;color:var(--muted);margin-top:14px}button{border:0;border-radius:12px;padding:12px 15px;font:inherit;font-weight:800;cursor:pointer}.primary{background:var(--accent);color:var(--brand);width:100%;margin-top:15px}.secondary{background:white;border:1px solid var(--line);color:var(--ink);width:100%;margin-top:9px}.section-title{font-size:14px;font-weight:850;margin:22px 0 10px}.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.rule{border:1px solid var(--line);border-radius:13px;padding:12px}.rule b{display:block;font-size:13px}.rule p{font-size:12px;color:var(--muted);margin:5px 0 0}footer{text-align:center;color:var(--muted);font-size:11px;margin-top:22px}@media(max-width:760px){.layout{grid-template-columns:1fr}.wrap{padding:14px 12px 28px}header{padding:23px 20px}.card{padding:18px}.rules{grid-template-columns:1fr}}@media print{body{background:white}.wrap{max-width:none;padding:0}header{border-radius:0;print-color-adjust:exact;-webkit-print-color-adjust:exact}.layout{grid-template-columns:1fr 1fr;gap:10px}.card,.result{box-shadow:none;break-inside:avoid}.no-print{display:none!important}}
-</style></head>
-<body><div class="wrap">
-<header><div class="brandline">Print Cabin · Price Book</div><h1>Kalkulator Jasa Formatting</h1><p>Hitung estimasi harga formatting dokumen secara cepat. Pilih kategori, jumlah halaman, dan promosi yang memenuhi syarat.</p><div class="pill">● Tarif internal · Bisa digunakan offline</div></header>
-<nav class="tool-nav" aria-label="Pilih kalkulator"><a class="active" href="index.html" aria-current="page">📝 Jasa Formatting</a><a href="cetak-foto.html">📸 Jasa Cetak Foto →</a></nav>
-<div class="layout">
-<section class="card"><h2>Atur pesanan</h2><p class="sub">Ubah pilihan di bawah untuk melihat perhitungan secara langsung.</p>
-<span class="field-label">1. Kategori layanan</span><div class="categories">
-<div class="cat"><input type="radio" name="category" id="basic" value="Basic" checked><label for="basic"><strong>Basic</strong><span>Format dasar dokumen</span><em>Rp1.000/hal.</em></label></div>
-<div class="cat"><input type="radio" name="category" id="standard" value="Standard"><label for="standard"><strong>Standard</strong><span>Makalah dan laporan</span><em>Rp2.000/hal.</em></label></div>
-<div class="cat"><input type="radio" name="category" id="academic" value="Academic"><label for="academic"><strong>Academic</strong><span>Skripsi sesuai pedoman</span><em>Rp3.000/hal.</em></label></div>
-<div class="cat"><input type="radio" name="category" id="complex" value="Complex"><label for="complex"><strong>Complex</strong><span>Layout tingkat lanjut</span><em>Rp5.000/hal.</em></label></div></div>
-<div class="block"><div class="flex"><label class="field-label" for="range">2. Jumlah halaman</label><div class="count"><span id="count">10</span> hal.</div></div><input id="range" type="range" min="1" max="250" value="10" aria-label="Jumlah halaman"><div class="marks"><span>1 halaman</span><span>125</span><span>250 halaman</span></div><div class="numberline"><label for="pages" class="field-label" style="margin:0">Atau masukkan angka:</label><input id="pages" type="number" min="1" max="10000" value="10"></div></div>
-<div class="block"><label class="field-label" for="promo">3. Status pelanggan / promosi</label><select id="promo"><option value="none">Tidak menggunakan promo</option><option value="new">Pelanggan baru (Basic/Standard saja)</option><option value="loyal">Pelanggan loyal (setelah 3 transaksi)</option></select><div class="hint">Jika diskon volume dan promo sama-sama memenuhi syarat, sistem memilih satu diskon dengan penghematan terbesar. Diskon tidak ditumpuk.</div></div>
-<div class="section-title">Ringkasan cakupan</div><div class="info" id="scope">Margin, font, ukuran huruf, spasi, paragraf, dan perataan teks.</div><button class="secondary no-print" id="reset">Kembalikan ke awal</button></section>
-<section class="card"><h2>Rincian harga</h2><p class="sub">Estimasi jasa formatting, belum termasuk cetak atau layanan tambahan.</p><div class="result"><div class="caption">Total biaya formatting</div><div class="total" id="total">Rp10.000</div><div class="small" id="totalnote">Setelah minimum biaya dan diskon yang berlaku.</div></div>
-<div class="rows"><div class="r"><span>Kategori layanan</span><strong id="outCategory">Basic</strong></div><div class="r"><span>Tarif per halaman</span><strong id="outRate">Rp1.000</strong></div><div class="r"><span>Jumlah halaman</span><strong id="outPages">10 halaman</strong></div><div class="r"><span>Biaya sebelum diskon</span><strong id="subtotal">Rp10.000</strong></div><div class="r"><span>Diskon volume tersedia</span><strong id="volumePct">0%</strong></div><div class="r"><span>Promo tersedia</span><strong id="promoPct">0%</strong></div><div class="r"><span>Diskon yang digunakan</span><strong id="applied">Tidak ada</strong></div><div class="r"><span>Penghematan</span><strong class="saving" id="saving">Rp0</strong></div><div class="r"><span>Minimum pesanan</span><strong id="minimum">Rp10.000</strong></div></div>
-<div class="info" id="explain">Basic memiliki minimum biaya pesanan Rp10.000.</div><button class="primary no-print" id="copy">Salin ringkasan pesanan</button><button class="secondary no-print" id="print">Cetak / Simpan PDF</button><div id="message" class="hint" aria-live="polite"></div></section></div>
-<section class="card" style="margin-top:18px"><h2>Aturan tarif dan diskon</h2><p class="sub">Acuan kerja internal Print Cabin.</p><div class="rules">
-<div class="rule"><b>Basic · Rp1.000/halaman</b><p>1–19 halaman: 0% · 20–49: 5% · 50+: 10%. Minimum Rp10.000.</p></div><div class="rule"><b>Standard · Rp2.000/halaman</b><p>1–19 halaman: 0% · 20–49: 5% · 50–99: 7% · 100+: 10%. Minimum Rp10.000.</p></div><div class="rule"><b>Academic · Rp3.000/halaman</b><p>1–49 halaman: 0% · 50–99: 3% · 100–149: 5% · 150+: 7%. Minimum Rp30.000.</p></div><div class="rule"><b>Complex · Rp5.000/halaman</b><p>1–99 halaman: 0% · 100–199: 3% · 200+: 5%. Minimum belum ditetapkan.</p></div></div>
-<div class="info">Promo pelanggan baru: 10% maksimal Rp10.000, hanya Basic/Standard. Promo loyal: 5% setelah tiga transaksi berbayar. Diskon tidak ditumpuk; sistem menggunakan satu diskon dengan penghematan terbesar yang memenuhi syarat.</div><div class="info">Tidak termasuk penulisan isi dari nol, pengetikan ulang dari gambar/PDF, koreksi bahasa menyeluruh, layanan layout tambahan, dan biaya cetak. Kesalahan formatting dari Print Cabin diperbaiki tanpa biaya sesuai cakupan revisi yang disepakati.</div></section>
-<footer>Print Cabin · One House, Many Possibilities · Kalkulator lokal, perhitungan berjalan di perangkat Anda.</footer></div>
-<script>
-const rates={Basic:1000,Standard:2000,Academic:3000,Complex:5000},mins={Basic:10000,Standard:10000,Academic:30000,Complex:0};
-const scopes={Basic:"Margin, font, ukuran huruf, spasi, paragraf, dan perataan teks.",Standard:"Basic + heading, penomoran, page break, serta daftar isi otomatis bila diperlukan.",Academic:"Format skripsi sesuai pedoman, penomoran Romawi/Arab, serta daftar tabel/gambar sesuai kebutuhan.",Complex:"Layout khusus, tabel kompleks, persamaan, dan penataan dokumen tingkat lanjut."};const $=id=>document.getElementById(id),money=n=>"Rp"+Math.round(n).toLocaleString("id-ID");
-function vd(c,n){if(c==="Basic")return n>=50?10:n>=20?5:0;if(c==="Standard")return n>=100?10:n>=50?7:n>=20?5:0;if(c==="Academic")return n>=150?7:n>=100?5:n>=50?3:0;return n>=200?5:n>=100?3:0}function cat(){return document.querySelector('input[name="category"]:checked').value}
-function update(){const c=cat(),n=Math.max(1,Math.min(10000,parseInt($("pages").value)||1));$("pages").value=n;$("count").textContent=n;$("range").value=Math.min(250,n);const base=Math.max(n*rates[c],mins[c]),v=vd(c,n),p=$("promo").value;let pp=0,pn="";if(p==="new"&&(c==="Basic"||c==="Standard")){pp=10;pn="Pelanggan baru"}if(p==="loyal"){pp=5;pn="Pelanggan loyal"}const vs=Math.round(base*v/100),ps=pn?Math.min(Math.round(base*pp/100),p==="new"?10000:Infinity):0;let saving=0,applied="Tidak ada";if(vs>=ps&&vs>0){saving=vs;applied="Diskon volume ("+v+"%)"}else if(ps>0){saving=ps;applied=pn+" ("+pp+"%)"}const final=Math.max(0,base-saving);$("outCategory").textContent=c;$("outRate").textContent=money(rates[c]);$("outPages").textContent=n+" halaman";$("subtotal").textContent=money(base);$("volumePct").textContent=v+"%";$("promoPct").textContent=pn?pp+"%"+(p==="new"?" (maks. Rp10.000)":""):"Tidak memenuhi syarat";$("applied").textContent=applied;$("saving").textContent=money(saving);$("minimum").textContent=mins[c]?money(mins[c]):"Belum ditetapkan";$("total").textContent=money(final);$("scope").textContent=scopes[c];$("explain").textContent=mins[c]?"Minimum pesanan "+c+" adalah "+money(mins[c])+".":"Minimum pesanan Complex belum ditetapkan; periksa kompleksitas dokumen sebelum memberi harga final.";$("totalnote").textContent=saving>0?"Hemat "+money(saving)+" dari biaya sebelum diskon.":"Belum ada diskon yang berlaku.";window.quote={category:c,pages:n,rate:rates[c],base,applied,saving,final}}
-document.querySelectorAll('input[name="category"]').forEach(x=>x.addEventListener('change',update));$("range").addEventListener("input",()=>{$("pages").value=$("range").value;update()});$("pages").addEventListener("input",update);$("promo").addEventListener("change",update);$("reset").addEventListener("click",()=>{$("basic").checked=true;$("pages").value=10;$("range").value=10;$("promo").value="none";update();$("message").textContent="Pilihan dikembalikan ke awal."});$("copy").addEventListener("click",async()=>{const q=window.quote,txt=["PRINT CABIN — ESTIMASI FORMATTING","Kategori: "+q.category,"Jumlah halaman: "+q.pages,"Tarif per halaman: "+money(q.rate),"Biaya sebelum diskon: "+money(q.base),"Diskon digunakan: "+q.applied,"Penghematan: "+money(q.saving),"TOTAL FORMATTING: "+money(q.final),"Belum termasuk cetak dan layanan tambahan."].join("\n");try{await navigator.clipboard.writeText(txt);$("message").textContent="Ringkasan berhasil disalin."}catch(e){const t=document.createElement("textarea");t.value=txt;document.body.appendChild(t);t.select();document.execCommand("copy");t.remove();$("message").textContent="Ringkasan disalin."}});$("print").addEventListener("click",()=>window.print());update();
-</script></body></html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#153d35">
+    <title>Print Cabin Tools | Kalkulator Formatting</title>
+    <style>
+    :root {
+        --ink: #1d2926;
+        --muted: #65736e;
+        --line: #e0e7e3;
+        --paper: #f5f7f4;
+        --brand: #153d35;
+        --accent: #c4e6d8;
+        --soft: #eaf4ef;
+        --shadow: 0 12px 35px rgba(24, 54, 44, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+        line-height: 1.5;
+    }
+
+    .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 24px 16px 42px;
+    }
+
+    header {
+        background: var(--brand);
+        color: white;
+        border-radius: 24px;
+        padding: 28px 26px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    header::after {
+        content: "";
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        border: 1px solid #ffffff26;
+        border-radius: 50%;
+        right: -62px;
+        top: -92px;
+        box-shadow: 0 0 0 28px #ffffff09, 0 0 0 58px #ffffff06;
+    }
+
+    .brandline {
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 800;
+    }
+
+    h1 {
+        font-size: clamp(25px, 4vw, 36px);
+        line-height: 1.15;
+        margin: 10px 0;
+        max-width: 600px;
+    }
+
+    header p {
+        color: #dbe8e2;
+        margin: 0;
+        max-width: 610px;
+        font-size: 14px;
+    }
+
+    .pill {
+        display: inline-flex;
+        background: #ffffff1f;
+        border: 1px solid #ffffff33;
+        padding: 7px 11px;
+        border-radius: 100px;
+        font-size: 12px;
+        margin-top: 18px;
+    }
+
+    .tool-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 16px;
+    }
+
+    .tool-nav a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--brand);
+        font-size: 13px;
+        font-weight: 800;
+        padding: 11px 14px;
+        border-radius: 12px;
+    }
+
+    .tool-nav a.active {
+        background: var(--brand);
+        color: #fff;
+        border-color: var(--brand);
+    }
+
+    .layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+        gap: 18px;
+        margin-top: 18px;
+        align-items: start;
+    }
+
+    .card {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 22px;
+        box-shadow: var(--shadow);
+    }
+
+    h2 {
+        font-size: 17px;
+        margin: 0 0 5px;
+    }
+
+    .sub {
+        font-size: 13px;
+        color: var(--muted);
+        margin: 0 0 19px;
+    }
+
+    .field-label {
+        font-weight: 750;
+        font-size: 13px;
+        display: block;
+        margin-bottom: 9px;
+    }
+
+    .categories {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .cat input {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .cat label {
+        display: block;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 13px;
+        cursor: pointer;
+        min-height: 93px;
+        background: white;
+    }
+
+    .cat input:checked + label {
+        border: 2px solid var(--brand);
+        padding: 12px;
+        background: var(--soft);
+    }
+
+    .cat label strong {
+        display: block;
+        font-size: 14px;
+    }
+
+    .cat label span {
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        margin-top: 4px;
+    }
+
+    .cat label em {
+        display: block;
+        font-style: normal;
+        font-size: 14px;
+        font-weight: 850;
+        margin-top: 8px;
+        color: var(--brand);
+    }
+
+    .block {
+        margin-top: 22px;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .count {
+        font-size: 21px;
+        font-weight: 850;
+        color: var(--brand);
+        white-space: nowrap;
+    }
+
+    input[type="range"] {
+        width: 100%;
+        accent-color: var(--brand);
+        margin: 13px 0 7px;
+    }
+
+    .marks {
+        display: flex;
+        justify-content: space-between;
+        font-size: 11px;
+        color: var(--muted);
+    }
+
+    .numberline {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 12px;
+    }
+
+    .numberline input {
+        width: 110px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .hint {
+        font-size: 12px;
+        color: var(--muted);
+        margin-top: 8px;
+    }
+
+    select {
+        width: 100%;
+        border: 1px solid var(--line);
+        padding: 12px 13px;
+        border-radius: 12px;
+        background: white;
+        color: var(--ink);
+        font-size: 14px;
+    }
+
+    .result {
+        background: var(--brand);
+        color: white;
+        border-radius: 18px;
+        padding: 20px;
+        margin-bottom: 14px;
+    }
+
+    .caption {
+        color: var(--accent);
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+
+    .total {
+        font-size: clamp(31px, 4vw, 42px);
+        font-weight: 900;
+        line-height: 1.15;
+        margin: 7px 0;
+    }
+
+    .small {
+        font-size: 12px;
+        color: #dbe8e2;
+    }
+
+    .rows {
+        display: grid;
+    }
+
+    .r {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 13px;
+    }
+
+    .r:last-child {
+        border-bottom: 0;
+    }
+
+    .r span:first-child {
+        color: var(--muted);
+    }
+
+    .r strong {
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+    }
+
+    .saving {
+        color: #14704f !important;
+    }
+
+    .info {
+        border-radius: 12px;
+        background: #f7f8f5;
+        padding: 12px;
+        font-size: 12px;
+        color: var(--muted);
+        margin-top: 14px;
+    }
+
+    button {
+        border: 0;
+        border-radius: 12px;
+        padding: 12px 15px;
+        font: inherit;
+        font-weight: 800;
+        cursor: pointer;
+    }
+
+    .primary {
+        background: var(--accent);
+        color: var(--brand);
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .secondary {
+        background: white;
+        border: 1px solid var(--line);
+        color: var(--ink);
+        width: 100%;
+        margin-top: 9px;
+    }
+
+    .section-title {
+        font-size: 14px;
+        font-weight: 850;
+        margin: 22px 0 10px;
+    }
+
+    .rules {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .rule {
+        border: 1px solid var(--line);
+        border-radius: 13px;
+        padding: 12px;
+    }
+
+    .rule b {
+        display: block;
+        font-size: 13px;
+    }
+
+    .rule p {
+        font-size: 12px;
+        color: var(--muted);
+        margin: 5px 0 0;
+    }
+
+    footer {
+        text-align: center;
+        color: var(--muted);
+        font-size: 11px;
+        margin-top: 22px;
+    }
+
+    @media (max-width: 760px) {
+        .layout {
+        grid-template-columns: 1fr;
+        }
+
+        .wrap {
+        padding: 14px 12px 28px;
+        }
+
+        header {
+        padding: 23px 20px;
+        }
+
+        .card {
+        padding: 18px;
+        }
+
+        .rules {
+        grid-template-columns: 1fr;
+        }
+    }
+
+    @media print {
+        body {
+        background: white;
+        }
+
+        .wrap {
+        max-width: none;
+        padding: 0;
+        }
+
+        header {
+        border-radius: 0;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+        }
+
+        .layout {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        }
+
+        .card,
+        .result {
+        box-shadow: none;
+        break-inside: avoid;
+        }
+
+        .no-print {
+        display: none !important;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    <header>
+        <div class="brandline">Print Cabin · Price Book</div>
+        <h1>Kalkulator Jasa Formatting</h1>
+        <p>Hitung estimasi harga formatting dokumen secara cepat. Pilih kategori, jumlah halaman, dan promosi yang memenuhi syarat.</p>
+        <div class="pill">● Tarif internal · Bisa digunakan offline</div>
+    </header>
+
+    <nav class="tool-nav" aria-label="Pilih kalkulator">
+        <a class="active" href="index.html" aria-current="page">📝 Jasa Formatting</a>
+        <a href="cetak-foto.html">📸 Jasa Cetak Foto</a>
+    </nav>
+
+    <main class="layout">
+        <section class="card">
+        <h2>Atur pesanan</h2>
+        <p class="sub">Ubah pilihan di bawah untuk melihat perhitungan secara langsung.</p>
+
+        <span class="field-label">1. Kategori layanan</span>
+        <div class="categories">
+            <div class="cat">
+            <input type="radio" name="category" id="basic" value="Basic" checked>
+            <label for="basic">
+                <strong>Basic</strong>
+                <span>Format dasar dokumen</span>
+                <em>Rp1.000/hal.</em>
+            </label>
+            </div>
+
+            <div class="cat">
+            <input type="radio" name="category" id="standard" value="Standard">
+            <label for="standard">
+                <strong>Standard</strong>
+                <span>Makalah dan laporan</span>
+                <em>Rp2.000/hal.</em>
+            </label>
+            </div>
+
+            <div class="cat">
+            <input type="radio" name="category" id="academic" value="Academic">
+            <label for="academic">
+                <strong>Academic</strong>
+                <span>Skripsi sesuai pedoman</span>
+                <em>Rp3.000/hal.</em>
+            </label>
+            </div>
+
+            <div class="cat">
+            <input type="radio" name="category" id="complex" value="Complex">
+            <label for="complex">
+                <strong>Complex</strong>
+                <span>Layout tingkat lanjut</span>
+                <em>Rp5.000/hal.</em>
+            </label>
+            </div>
+        </div>
+
+        <div class="block">
+            <div class="flex">
+            <label class="field-label" for="range">2. Jumlah halaman</label>
+            <div class="count"><span id="count">10</span> hal.</div>
+            </div>
+            <input id="range" type="range" min="1" max="250" value="10" aria-label="Jumlah halaman">
+            <div class="marks">
+            <span>1 halaman</span>
+            <span>125</span>
+            <span>250 halaman</span>
+            </div>
+            <div class="numberline">
+            <label for="pages" class="field-label" style="margin: 0;">Atau masukkan angka:</label>
+            <input id="pages" type="number" min="1" max="10000" value="10">
+            </div>
+        </div>
+
+        <div class="block">
+            <label class="field-label" for="promo">3. Status pelanggan / promosi</label>
+            <select id="promo">
+            <option value="none">Tidak menggunakan promo</option>
+            <option value="new">Pelanggan baru (Basic/Standard saja)</option>
+            <option value="loyal">Pelanggan loyal (setelah 3 transaksi)</option>
+            </select>
+            <div class="hint">Jika diskon volume dan promo sama-sama memenuhi syarat, sistem memilih satu diskon dengan penghematan terbesar. Diskon tidak ditumpuk.</div>
+        </div>
+
+        <div class="section-title">Ringkasan cakupan</div>
+        <div class="info" id="scope">Margin, font, ukuran huruf, spasi, paragraf, dan perataan teks.</div>
+        <button class="secondary no-print" id="reset">Kembalikan ke awal</button>
+        </section>
+
+        <section class="card">
+        <h2>Rincian harga</h2>
+        <p class="sub">Estimasi jasa formatting, belum termasuk cetak atau layanan tambahan.</p>
+
+        <div class="result">
+            <div class="caption">Total biaya formatting</div>
+            <div class="total" id="total">Rp10.000</div>
+            <div class="small" id="totalnote">Setelah minimum biaya dan diskon yang berlaku.</div>
+        </div>
+
+        <div class="rows">
+            <div class="r"><span>Kategori layanan</span><strong id="outCategory">Basic</strong></div>
+            <div class="r"><span>Tarif per halaman</span><strong id="outRate">Rp1.000</strong></div>
+            <div class="r"><span>Jumlah halaman</span><strong id="outPages">10 halaman</strong></div>
+            <div class="r"><span>Biaya sebelum diskon</span><strong id="subtotal">Rp10.000</strong></div>
+            <div class="r"><span>Diskon volume tersedia</span><strong id="volumePct">0%</strong></div>
+            <div class="r"><span>Promo tersedia</span><strong id="promoPct">0%</strong></div>
+            <div class="r"><span>Diskon yang digunakan</span><strong id="applied">Tidak ada</strong></div>
+            <div class="r"><span>Penghematan</span><strong class="saving" id="saving">Rp0</strong></div>
+            <div class="r"><span>Minimum pesanan</span><strong id="minimum">Rp10.000</strong></div>
+        </div>
+
+        <div class="info" id="explain">Basic memiliki minimum biaya pesanan Rp10.000.</div>
+        <button class="primary no-print" id="copy">Salin ringkasan pesanan</button>
+        <button class="secondary no-print" id="print">Cetak / Simpan PDF</button>
+        <div id="message" class="hint" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <section class="card" style="margin-top: 18px;">
+        <h2>Aturan tarif dan diskon</h2>
+        <p class="sub">Acuan kerja internal Print Cabin.</p>
+
+        <div class="rules">
+        <div class="rule">
+            <b>Basic · Rp1.000/halaman</b>
+            <p>1–19 halaman: 0% · 20–49: 5% · 50+: 10%. Minimum Rp10.000.</p>
+        </div>
+        <div class="rule">
+            <b>Standard · Rp2.000/halaman</b>
+            <p>1–19 halaman: 0% · 20–49: 5% · 50–99: 7% · 100+: 10%. Minimum Rp10.000.</p>
+        </div>
+        <div class="rule">
+            <b>Academic · Rp3.000/halaman</b>
+            <p>1–49 halaman: 0% · 50–99: 3% · 100–149: 5% · 150+: 7%. Minimum Rp30.000.</p>
+        </div>
+        <div class="rule">
+            <b>Complex · Rp5.000/halaman</b>
+            <p>1–99 halaman: 0% · 100–199: 3% · 200+: 5%. Minimum belum ditetapkan.</p>
+        </div>
+        </div>
+
+        <div class="info">Promo pelanggan baru: 10% maksimal Rp10.000, hanya Basic/Standard. Promo loyal: 5% setelah tiga transaksi berbayar. Diskon tidak ditumpuk; sistem menggunakan satu diskon dengan penghematan terbesar yang memenuhi syarat.</div>
+        <div class="info">Tidak termasuk penulisan isi dari nol, pengetikan ulang dari gambar/PDF, koreksi bahasa menyeluruh, layanan layout tambahan, dan biaya cetak. Kesalahan formatting dari Print Cabin diperbaiki tanpa biaya sesuai cakupan revisi yang disepakati.</div>
+    </section>
+
+    <footer>Print Cabin · One House, Many Possibilities · Kalkulator lokal, perhitungan berjalan di perangkat Anda.</footer>
+    </div>
+
+    <script>
+    const rates = {
+        Basic: 1000,
+        Standard: 2000,
+        Academic: 3000,
+        Complex: 5000,
+    };
+
+    const mins = {
+        Basic: 10000,
+        Standard: 10000,
+        Academic: 30000,
+        Complex: 0,
+    };
+
+    const scopes = {
+        Basic: "Margin, font, ukuran huruf, spasi, paragraf, dan perataan teks.",
+        Standard: "Basic + heading, penomoran, page break, serta daftar isi otomatis bila diperlukan.",
+        Academic: "Format skripsi sesuai pedoman, penomoran Romawi/Arab, serta daftar tabel/gambar sesuai kebutuhan.",
+        Complex: "Layout khusus, tabel kompleks, persamaan, dan penataan dokumen tingkat lanjut.",
+    };
+
+    const $ = (id) => document.getElementById(id);
+    const money = (value) => `Rp${Math.round(value).toLocaleString("id-ID")}`;
+
+    function getVolumeDiscount(category, pages) {
+        if (category === "Basic") {
+        return pages >= 50 ? 10 : pages >= 20 ? 5 : 0;
+        }
+
+        if (category === "Standard") {
+        return pages >= 100 ? 10 : pages >= 50 ? 7 : pages >= 20 ? 5 : 0;
+        }
+
+        if (category === "Academic") {
+        return pages >= 150 ? 7 : pages >= 100 ? 5 : pages >= 50 ? 3 : 0;
+        }
+
+        return pages >= 200 ? 5 : pages >= 100 ? 3 : 0;
+    }
+
+    function getSelectedCategory() {
+        return document.querySelector('input[name="category"]:checked').value;
+    }
+
+    function update() {
+        const category = getSelectedCategory();
+        const pages = Math.max(1, Math.min(10000, parseInt($("pages").value) || 1));
+
+        $("pages").value = pages;
+        $("count").textContent = pages;
+        $("range").value = Math.min(250, pages);
+
+        const base = Math.max(pages * rates[category], mins[category]);
+        const volumePercent = getVolumeDiscount(category, pages);
+        const promoKey = $("promo").value;
+
+        let promoPercent = 0;
+        let promoLabel = "";
+
+        if (promoKey === "new" && (category === "Basic" || category === "Standard")) {
+        promoPercent = 10;
+        promoLabel = "Pelanggan baru";
+        }
+
+        if (promoKey === "loyal") {
+        promoPercent = 5;
+        promoLabel = "Pelanggan loyal";
+        }
+
+        const volumeSaving = Math.round((base * volumePercent) / 100);
+        const promoSaving = promoLabel
+        ? Math.min(
+            Math.round((base * promoPercent) / 100),
+            promoKey === "new" ? 10000 : Number.MAX_SAFE_INTEGER
+            )
+        : 0;
+
+        let saving = 0;
+        let applied = "Tidak ada";
+
+        if (volumeSaving >= promoSaving && volumeSaving > 0) {
+        saving = volumeSaving;
+        applied = `Diskon volume (${volumePercent}%)`;
+        } else if (promoSaving > 0) {
+        saving = promoSaving;
+        applied = `${promoLabel} (${promoPercent}%)`;
+        }
+
+        const finalTotal = Math.max(0, base - saving);
+
+        $("outCategory").textContent = category;
+        $("outRate").textContent = money(rates[category]);
+        $("outPages").textContent = `${pages} halaman`;
+        $("subtotal").textContent = money(base);
+        $("volumePct").textContent = `${volumePercent}%`;
+        $("promoPct").textContent = promoLabel
+        ? `${promoPercent}%${promoKey === "new" ? " (maks. Rp10.000)" : ""}`
+        : "Tidak memenuhi syarat";
+        $("applied").textContent = applied;
+        $("saving").textContent = money(saving);
+        $("minimum").textContent = mins[category] ? money(mins[category]) : "Belum ditetapkan";
+        $("total").textContent = money(finalTotal);
+        $("scope").textContent = scopes[category];
+        $("explain").textContent = mins[category]
+        ? `Minimum pesanan ${category} adalah ${money(mins[category])}.`
+        : "Minimum pesanan Complex belum ditetapkan; periksa kompleksitas dokumen sebelum memberi harga final.";
+        $("totalnote").textContent = saving > 0
+        ? `Hemat ${money(saving)} dari biaya sebelum diskon.`
+        : "Belum ada diskon yang berlaku.";
+
+        window.quote = {
+        category,
+        pages,
+        rate: rates[category],
+        base,
+        applied,
+        saving,
+        final: finalTotal,
+        };
+    }
+
+    document.querySelectorAll('input[name="category"]').forEach((input) => {
+        input.addEventListener("change", update);
+    });
+
+    $("range").addEventListener("input", () => {
+        $("pages").value = $("range").value;
+        update();
+    });
+
+    $("pages").addEventListener("input", update);
+    $("promo").addEventListener("change", update);
+
+    $("reset").addEventListener("click", () => {
+        $("basic").checked = true;
+        $("pages").value = 10;
+        $("range").value = 10;
+        $("promo").value = "none";
+        update();
+        $("message").textContent = "Pilihan dikembalikan ke awal.";
+    });
+
+    $("copy").addEventListener("click", async () => {
+        const quote = window.quote;
+        const summaryText = [
+        "PRINT CABIN — ESTIMASI FORMATTING",
+        `Kategori: ${quote.category}`,
+        `Jumlah halaman: ${quote.pages}`,
+        `Tarif per halaman: ${money(quote.rate)}`,
+        `Biaya sebelum diskon: ${money(quote.base)}`,
+        `Diskon digunakan: ${quote.applied}`,
+        `Penghematan: ${money(quote.saving)}`,
+        `TOTAL FORMATTING: ${money(quote.final)}`,
+        "Belum termasuk cetak dan layanan tambahan.",
+        ].join("\n");
+
+        try {
+        await navigator.clipboard.writeText(summaryText);
+        $("message").textContent = "Ringkasan berhasil disalin.";
+        } catch (error) {
+        const textArea = document.createElement("textarea");
+        textArea.value = summaryText;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        textArea.remove();
+        $("message").textContent = "Ringkasan disalin.";
+        }
+    });
+
+    $("print").addEventListener("click", () => window.print());
+    update();
+    </script>
+</body>
+</html>
+
