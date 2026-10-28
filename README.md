@@ -1,18 +1,15 @@
-# Print Cabin Tools
+# Print Cabin Tools — Prototype Kalkulator Stiker
 
-Kumpulan kalkulator ringan untuk membantu estimasi harga layanan Print Cabin. Dibuat dengan HTML, CSS, dan JavaScript tanpa database; dapat dibuka secara lokal dan di-host sebagai situs statis.
-
-## Halaman
+Isi folder:
 - `index.html` — Kalkulator Jasa Formatting
 - `cetak-foto.html` — Kalkulator Jasa Cetak Foto
+- `stiker.html` — Kalkulator Stiker (prototype)
 
-## Cara mencoba
-Buka `index.html` atau `cetak-foto.html` di browser. Semua kalkulasi berjalan di perangkat dan tidak menyimpan data pelanggan.
+## Jalankan lokal
+Buka `index.html` atau `stiker.html` di browser. Semua halaman statis dan tidak membutuhkan server/backend.
 
-## Publikasi dengan GitHub Pages
-1. Unggah kedua file HTML dan README ke repository.
-2. Buka **Settings → Pages**.
-3. Pilih sumber publikasi dari branch utama dan folder root.
-4. Simpan lalu tunggu proses publikasi.
+## Publikasikan ke GitHub Pages
+Unggah/commit ketiga file HTML ke root repository yang sama. Pastikan nama file `index.html`, `cetak-foto.html`, dan `stiker.html` persis sama. Navigasi antarhalaman sudah ditambahkan.
 
-Catatan: ini adalah kalkulator estimasi sederhana, bukan sistem transaksi atau penyimpanan data pelanggan. Periksa ketentuan platform hosting sebelum digunakan untuk operasional komersial.
+## Catatan penting
+Nilai awal biaya bahan, cetak, potong, dan margin pada kalkulator stiker hanya contoh yang dapat diedit. Nilai tersebut bukan harga jual resmi Print Cabin. Perhitungan tata letak menggunakan grid sederhana dan belum memperhitungkan bleed, area non-printable printer, contour cut, atau efisiensi nesting bentuk kompleks.
